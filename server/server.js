@@ -5,8 +5,6 @@ const path = require('path');
 const app = express();
 
 app.use(cors()); // Enable CORS for all routes
-app.use(express.static(path.join(__dirname, 'build'))); // Serving build folder
-
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -23,9 +21,9 @@ app.get('/api/hash/:hash', (req, res) => {
 });
 
 // Handles any requests that don't match the ones above
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 const PORT = 4000;
 app.listen(PORT, () => {
