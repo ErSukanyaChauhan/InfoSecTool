@@ -9,16 +9,16 @@ app.use(cors()); // Enable CORS for all routes
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {
-  const hash = req.params.hash;
-  const options = {
-    url: `http://www.virustotal.com/api/v3/files/${hash}`,
-    headers: {
-      accept: 'application/json',
-      'x-apikey': '4a812c43e5c6d22664cba618b14df7830dac5979759fa6b447ac9d3a6b8a22cd'
-    }
-  };
-  res.send('HASH is working Hello, from server side!');
-  request(options).pipe(res);
+  // const hash = req.params.hash;
+  // const options = {
+  //   url: `http://www.virustotal.com/api/v3/files/${hash}`,
+  //   headers: {
+  //     accept: 'application/json',
+  //     'x-apikey': '4a812c43e5c6d22664cba618b14df7830dac5979759fa6b447ac9d3a6b8a22cd'
+  //   }
+  // };
+  res.send('HASH is working!');
+  // request(options).pipe(res);
 });
 
 // Handles any requests that don't match the ones above
