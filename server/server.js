@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
       'x-apikey': '4a812c43e5c6d22664cba618b14df7830dac5979759fa6b447ac9d3a6b8a22cd'
     }
   };
-  res.send('Hello, from server side!');
+  res.send('HASH is working Hello, from server side!');
   request(options).pipe(res);
 });
 
