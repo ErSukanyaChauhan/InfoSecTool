@@ -20,10 +20,7 @@ app.get('/', (req, res) => {
   // request(options).pipe(res);
 });
 
-// Handles any requests that don't match the ones above
-// app.get('/', (req, res) => {
-//   res.send('Hello, from server side!');
-// });
+
 
 const PORT = 4000;
 app.listen(PORT, () => {
