@@ -23,7 +23,7 @@ app.get('/api/hash/:hash', (req, res) => {
   request(options).pipe(res);
 });
 
-const PORT = 5000;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
