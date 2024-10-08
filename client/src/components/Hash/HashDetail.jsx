@@ -86,7 +86,7 @@ const HashDetail = (props, { theme, setTheme }) => {
 
     async function getHashValueDetail(hash) {
         try {
-            const response = await fetch(`http://api.infosectool.com/`);
+              const response = await fetch(`http://localhost:5000/api/hash/${hash}`);
             const result = await response.json();
             console.log(result);
             return result;
